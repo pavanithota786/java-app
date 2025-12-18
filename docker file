@@ -1,6 +1,7 @@
 # Pull base image 
-From tomcat:8-jre8
+From tomcat; 10.1-jdk21-temurin
 
 # Maintainer 
-MAINTAINER "nipuna@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+MAINTAINER "pavanithota786@gmail.com" 
+COPY target/*.war  /usr/local/tomcat/webapps/ROOT.war
+EXPOSE 8080
